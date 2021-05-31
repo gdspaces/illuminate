@@ -74,7 +74,7 @@
 				<option  value='28'>28</option>
 				<option  value='29'>29</option>
 				<option  value='30'>30</option>
-				<!-- <option  value='31'>31</option>
+				<option  value='31'>31</option>
 				<option  value='32'>32</option>
 				<option  value='33'>33</option>
 				<option  value='34'>34</option>
@@ -580,37 +580,112 @@ The goal is to turn on all the lights, ideally with the minimum number of clicks
 }
 
 
-	var data = ['1 1 0 0 0 0 0 0 0 0 0 0 1 0 1 0 1 1 0 1 1 1 0 1 0',
-				'1 1 0 1 1 0 1 1 0 1 1 0 0 1 0 0 1 1 1 0 1 0 1 0 1',
-				'1 0 1 0 0 1 0 0 1 1 1 1 1 1 1 0 1 0 1 1 0 1 0 1 1',
-				'0 0 1 0 1 0 0 1 0 0 0 1 1 1 1 1 1 1 1 1 1 0 0 0 1',
-				'0 1 0 1 0 0 0 1 1 0 1 0 0 1 0 0 0 1 1 1 0 1 1 1 0',
-				'1 1 0 1 0 1 1 0 0 1 1 0 1 1 1 0 1 1 1 1 1 0 0 1 0',
-				'0 0 0 0 1 1 0 1 0 0 0 0 0 0 0 0 1 1 0 0 0 1 0 0 0',
-				'0 1 1 0 1 1 1 0 0 1 1 0 1 1 0 0 1 1 0 1 1 1 0 1 1',
-				'0 0 1 0 1 0 1 0 0 1 0 0 1 1 1 1 0 0 1 0 0 0 0 1 0',
-				'1 1 1 0 0 0 1 1 1 1 1 1 0 0 0 1 0 1 0 1 0 0 0 1 1',
-				'0 1 0 0 0 1 0 1 1 0 0 1 1 0 1 0 0 1 0 0 0 0 1 1 0',
-				'0 1 0 0 0 1 1 1 0 1 1 1 0 1 0 0 0 1 0 1 1 0 0 1 0',
-				'0 0 1 0 1 1 0 1 0 0 1 0 0 0 1 0 1 0 0 0 1 0 0 1 1',
-				'0 1 1 0 0 0 1 1 0 1 0 1 1 0 1 0 0 1 0 0 1 0 1 0 0',
-				'1 1 1 0 1 0 1 0 1 0 1 0 0 0 0 1 1 0 1 1 0 0 1 0 0',
-				'0 0 0 1 0 1 1 1 0 0 0 0 1 1 1 0 1 1 1 0 1 0 1 1 1',
-				'1 0 0 1 0 0 0 0 1 1 1 1 0 1 0 0 1 1 1 1 0 0 1 0 1',
-				'0 0 0 1 0 1 1 1 0 0 1 1 0 0 0 0 1 1 0 0 0 1 0 1 1',
-				'0 1 0 0 1 0 0 0 1 1 0 0 1 0 0 1 0 1 1 1 1 0 1 0 1',
-				'0 1 0 1 1 0 0 0 1 1 0 0 1 1 0 1 1 1 0 0 1 0 0 0 1',
-				'1 0 1 1 0 0 1 1 0 1 0 0 1 1 1 1 0 0 0 1 0 0 1 1 1',
-				'0 0 0 1 0 0 1 1 1 1 1 1 0 1 1 0 1 0 0 0 1 0 1 0 0',
-				'0 0 0 1 0 0 1 0 1 1 1 0 0 0 1 1 1 1 0 0 0 1 1 0 0',
-				'0 0 1 0 1 0 1 1 0 1 0 0 1 0 0 1 0 1 0 0 1 1 0 0 1',
-				'0 0 0 0 1 1 0 1 1 1 0 0 1 1 0 1 0 1 1 0 0 0 1 1 1',
-				'0 0 1 1 0 0 0 0 0 1 0 0 1 0 0 1 1 0 1 0 1 0 0 0 0',
-				'0 1 1 0 0 1 0 0 1 1 0 1 0 1 1 1 0 0 1 0 0 0 1 1 1',
-				'0 1 0 0 1 1 1 1 0 0 0 0 1 0 1 1 0 1 0 0 0 1 1 0 0',
-				'0 1 0 0 1 0 0 0 0 0 0 1 0 1 0 1 0 0 0 0 0 1 0 1 0',
-				'0 1 0 0 1 1 0 1 0 0 0 1 0 1 0 1 0 0 0 0 1 0 0 0 1'
+	var data = ['0 1 1 0 1 0 0 1 1 1 1 1 1 1 1 1',
+				'1 1 1 0 1 1 0 0 1 0 1 1 0 0 1 0',
+				'0 1 0 0 0 0 1 0 0 1 0 1 1 0 0 0',
+				'0 1 1 0 1 0 0 1 1 0 0 1 0 1 1 0',
+				'1 1 0 0 1 0 1 1 0 1 1 0 0 1 0 0',
+				'0 1 1 0 0 1 1 0 1 1 1 1 1 0 0 1',
+				'1 1 1 0 1 0 1 0 1 1 1 1 0 1 0 1',
+				'0 1 1 0 1 1 1 1 1 1 1 1 0 1 1 0',
+				'1 1 1 1 1 0 0 1 1 0 0 1 1 1 1 1',
+				'1 1 1 1 1 0 0 1 1 1 1 1 0 1 1 0',
+				'1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1',
+				'0 0 0 1 1 1 0 0 0 0 1 0 0 0 1 0',
+				'1 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1',
+				'0 1 1 1 0 1 1 1 1 1 0 1 0 1 0 1',
+				'1 1 1 1 0 0 0 1 1 1 1 1 1 1 0 0',
+				'1 1 0 0 1 0 0 0 1 0 0 1 1 1 1 1',
+				'1 1 1 0 1 1 1 1 1 1 0 0 0 1 0 1',
+				'0 1 1 1 1 1 0 0 1 1 1 1 0 1 0 1',
+				'1 1 1 0 1 1 1 1 0 0 1 1 0 0 1 1',
+				'0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0',
+				'0 0 1 0 0 0 1 0 1 0 1 0 0 0 1 0 1 0 1 0 0 0 1 0 0',
+				'1 1 0 0 0 0 1 0 0 0 0 1 1 1 0 0 1 1 1 0 0 1 0 1 0',
+				'1 1 0 0 1 0 1 1 0 0 0 0 1 1 0 1 1 0 1 1 0 1 0 0 1',
+				'0 0 1 0 0 0 1 0 1 0 1 1 1 1 1 0 0 1 0 0 0 1 0 1 0',
+				'0 0 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 1 0 0 0 1 0 1 0',
+				'0 1 1 1 0 1 0 1 0 1 1 0 1 0 1 0 1 1 1 0 0 1 1 1 0',
+				'0 1 1 1 0 0 1 1 1 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0',
+				'0 0 1 0 0 0 1 0 1 0 1 1 0 1 1 0 1 0 1 0 0 0 1 0 0',
+				'1 0 1 0 1 0 1 1 1 0 0 1 1 1 0 1 0 1 0 1 0 0 1 0 0',
+				'0 0 1 0 0 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 0 0 1 0 0',
+				'1 1 0 0 0 0 1 0 0 0 0 1 0 0 1 0 1 1 1 0 0 1 0 1 0',
+				'1 1 0 0 0 1 1 1 0 0 0 1 1 1 0 0 0 1 1 1 0 0 0 1 1',
+				'0 0 0 1 0 1 1 0 1 0 0 0 0 0 0 0 1 0 1 1 0 1 0 0 0',
+				'1 0 1 0 1 1 1 1 1 1 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0',
+				'1 0 0 0 1 1 1 1 1 1 0 0 1 0 0 1 1 1 1 1 1 0 0 0 1',
+				'1 1 0 1 1 0 1 0 1 0 0 1 1 1 0 0 0 1 0 0 0 0 1 0 0',
+				'1 0 0 0 1 1 0 0 0 1 0 1 1 1 0 0 0 1 0 0 0 0 1 0 0',
+				'1 1 1 1 1 1 0 0 0 1 1 0 1 0 1 1 0 0 0 1 1 1 1 1 1',
+				'0 1 1 1 0 1 1 0 1 1 1 0 1 0 1 1 1 0 1 1 0 1 1 1 0',
+				'1 1 1 1 0 1 0 0 1 0 1 0 0 1 0 1 1 1 1 1 0 0 0 1 0',
+				'1 1 1 0 0 1 0 1 0 1 1 1 1 1 1 0 0 1 1 0 0 1 1 0 1',
+				'0 0 1 0 1 1 1 1 1 1 0 1 0 1 0 1 1 1 1 1 1 0 1 0 0',
+				'0 1 1 1 0 0 1 0 1 0 1 1 1 1 1 0 1 1 1 0 0 1 0 1 0',	
+				'1 0 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 1 0 0 0 0 1 0 0',
+				'1 1 1 0 0 1 0 1 0 0 1 1 1 1 1 0 0 1 0 1 0 0 1 1 1',
+				'1 1 1 1 1 0 1 1 1 0 1 1 1 1 1 1 0 1 0 1 0 0 1 0 0',
+				'0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 0',
+				'1 1 0 1 1 0 1 0 1 0 1 1 0 1 1 0 0 1 0 0 0 0 1 0 0',
+				'1 0 0 0 1 0 1 0 1 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0',
+				'0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0',
+
 ]
+
+
+
+	var solve_data  = [
+						   '0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0',
+						   '0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 1',
+						   '0 0 0 1 1 0 0 0 0 0 0 0 0 0 1 0',
+						   '0 0 0 0 1 0 0 1 1 0 0 1 0 0 0 0',
+				       '0 0 1 0 0 1 0 0 1 0 0 0 0 0 0 1',
+				       '0 0 0 0 1 0 0 1 0 1 1 0 0 0 0 0',
+				       '0 0 0 0 0 0 0 1 0 1 1 0 1 0 0 0',
+				       '0 1 1 0 0 0 0 0 0 1 1 0 1 0 0 1',
+				       '1 1 1 1 0 1 1 0 0 0 0 0 0 0 0 0',
+				       '0 0 0 0 0 0 0 0 0 1 1 0 1 0 0 1',
+					   '0 0 1 0 0 0 0 0 1 0 0 1 0 0 1 0',
+					   '0 0 0 0 1 1 1 0 0 1 1 0 1 0 1 0',
+					   '0 0 0 1 0 0 0 0 1 1 0 0 1 1 0 0',
+					   '0 0 0 0 1 0 0 0 0 1 0 0 0 1 0 0',
+					   '0 0 0 0 0 0 0 0 1 1 1 0 0 1 0 1',
+					   '0 0 0 0 0 0 1 1 0 0 1 1 0 0 0 1',
+					   '0 0 0 0 0 0 0 1 0 0 1 1 0 1 1 0',
+					   '0 0 0 1 1 0 1 1 1 0 1 0 0 0 0 0',
+					   '0 0 0 0 0 0 0 1 0 0 1 1 1 0 0 1',
+					   '0 0 1 0 1 0 0 0 0 0 0 1 0 1 0 0',
+				       '1 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1',
+				       '1 0 0 0 0 1 1 1 1 1 0 1 0 0 1 1 0 0 0 1 0 0 0 1 1',
+					   '0 0 1 1 0 0 1 1 1 1 0 0 0 1 1 1 0 0 1 0 1 1 0 0 0',
+					   '1 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 1 1 0 0 1 0 1 0',
+					   '0 1 0 0 1 0 0 0 0 0 1 0 0 1 0 0 1 0 1 0 1 0 0 1 0',
+					   '0 1 1 0 1 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 1 0 1 1 0',
+					   '0 1 1 0 1 0 0 0 0 0 1 1 1 0 0 1 0 0 0 1 1 1 1 0 0',
+					   '0 1 1 0 1 0 1 0 1 0 0 0 0 1 1 0 1 0 1 0 0 1 1 0 1',
+					   '0 1 0 1 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0',
+					   '1 1 1 0 0 1 0 0 0 1 1 0 0 1 0 0 0 1 0 0 0 1 0 0 1',
+					   '0 0 0 1 1 0 0 0 1 1 1 0 0 0 0 0 1 1 0 1 1 0 0 0 0',
+					   '0 0 0 0 0 0 0 1 1 1 0 1 0 0 1 0 1 0 0 1 0 1 1 1 0',
+					   '0 0 0 1 0 1 1 0 1 0 0 0 1 0 0 0 1 0 1 1 0 1 0 0 0',
+					   '1 1 1 0 0 0 0 0 0 0 1 1 1 0 0 1 0 0 0 1 1 1 1 0 0',
+					   '0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 1 0 1 0 1 1 0 0 0 1',
+					   '0 0 1 0 0 0 1 0 1 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 1',
+					   '1 1 0 0 0 0 1 0 1 0 0 1 1 0 1 0 1 0 1 0 0 1 1 0 1',
+					   '1 1 1 0 0 0 1 0 1 0 0 1 0 0 1 1 1 1 1 1 0 1 0 0 1',
+					   '1 1 0 0 0 1 0 1 0 1 0 1 0 0 1 0 0 0 0 0 0 1 1 0 1',
+					   '0 1 0 1 0 1 1 0 1 0 0 0 1 0 0 1 1 0 0 1 0 0 0 1 1',
+					   '0 0 1 0 1 0 1 1 1 0 1 1 0 1 0 0 1 1 0 1 1 0 0 1 0',
+					   '1 1 0 1 1 1 1 0 1 0 1 1 0 0 0 0 1 0 1 1 0 0 0 0 0',
+					   '0 1 0 0 1 0 1 1 1 0 0 1 0 0 1 1 0 0 0 1 0 0 0 1 1',
+					   '0 0 0 0 0 0 1 1 1 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 1',
+					   '1 0 0 0 0 1 1 0 1 1 1 1 0 1 1 1 1 0 1 1 0 0 0 0 1',
+					   '0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 1 1 0 1 1 1 1 0 1 1',
+					   '0 1 1 0 1 0 1 1 1 0 0 1 1 0 1 0 0 0 0 0 1 0 1 1 0',
+					   '0 0 1 0 0 0 1 0 1 0 0 1 0 1 0 1 0 1 0 1 0 0 1 0 0',
+					   '0 0 1 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 1 0 1 0',
+					   '1 1 0 0 0 1 1 0 1 1 0 0 1 1 1 0 1 1 1 0 0 1 1 0 1']
 
 	var index = localStorage.getItem('illuminate-movelevel');
 	document.getElementById("level").selectedIndex = index;
@@ -621,8 +696,10 @@ The goal is to turn on all the lights, ideally with the minimum number of clicks
 	
 	var set=""
 	var data_str=""
+	var solve_str=""
 	var data_arr
-	var data_arr
+	var solve_arr
+	var data_arr_org
 	var start=1
 	var path=""
 	
@@ -640,11 +717,17 @@ The goal is to turn on all the lights, ideally with the minimum number of clicks
 			  element = document.getElementById("cell"+(i+1));
 			  element.className = "plot";
 			  element.innerHTML = "";
+			  belement = document.getElementById("bcell"+(i+1));
+			  belement.className = "plot";
+			  belement.innerHTML = "";
 	}
 		index = document.getElementById("level").value -1;
 		start=1;
 		data_str = data[index];
+		solve_str = solve_data[index];
 		data_arr = data_str.split(" ");
+		solve_arr = solve_str.split(" ");
+		data_arr_org = data_str.split(" ");
 		console.log(data_arr);
 		setSize();
 		draw_board();
@@ -656,6 +739,10 @@ The goal is to turn on all the lights, ideally with the minimum number of clicks
 		var c=0;
 		var l=1;
        var n =  Math.sqrt(data_arr.length);
+	   if(n == 4) 
+			document.getElementById("matrix").style.padding="6px"
+	   else 
+			document.getElementById("matrix").style.padding="4px"
 		for (i = 0; i < data_arr.length; i++) {
 		   if (data_arr[i]=="1")	{
 				element = document.getElementById("cell"+(i+1));
@@ -696,6 +783,8 @@ The goal is to turn on all the lights, ideally with the minimum number of clicks
 		{
 			data_arr[k-1]="1";
 		}
+		belement = document.getElementById("bcell"+(k));
+		belement.innerHTML = "";
 		var n =  Math.sqrt(data_arr.length);
 				i=k-1;
 				var y = i%n; 
@@ -772,16 +861,38 @@ The goal is to turn on all the lights, ideally with the minimum number of clicks
 	
 	
 	function solve(){
-
+		var n =  Math.sqrt(data_arr_org.length);
+		for (i = 0; i < data_arr_org.length; i++) {
+			belement = document.getElementById("bcell"+(i+1));
+		   if (data_arr_org[i]=="1")	{
+				element = document.getElementById("cell"+(i+1));
+				element.className = "on";
+				if(solve_arr[i] == "1")
+				{
+					belement.className = "solve_"+n;
+					belement.innerHTML = "&#11044;";
+				}
+			}
+			else if (data_arr_org[i]=="0")	{
+				element = document.getElementById("cell"+(i+1));
+				element.className = "off";	
+				if(solve_arr[i] == "1")
+				{
+					belement.className = "solve_"+n;
+					belement.innerHTML = "&#11044;";
+				}
+			}
+			
+		}
 	}
 	
 	function closefinish(){
 			document.getElementById("finished").style.visibility ="hidden";
 			document.getElementById("finished").style.opacity = "0";
 			index=index+1;
-			if(index>119)
+			if(index>49)
 			{
-					index =119
+					index =49
 			}
 			store_level();
 			document.getElementById("level").selectedIndex = index;
