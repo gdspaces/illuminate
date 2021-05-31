@@ -628,6 +628,7 @@ button:active {
   background-color: #ffffeb;
   overflow: hidden;
     width: 99%;
+	padding: 6px;
 }
 
 .plot {
