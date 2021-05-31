@@ -7,6 +7,10 @@
     max-height: 70vh;
     overflow-y: scroll;
   }
+	
+#matrix {
+ padding: 0px !important;
+}
   
 .land_5{
 	font-size:6vw !important;
