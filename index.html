@@ -695,7 +695,11 @@ The goal is to turn on all the lights, ideally with the minimum number of clicks
 	document.getElementById("level").selectedIndex = index;
 	if(null == index)
 	{
+		help();
 		index = 0;
+		if (typeof(Storage) !== "undefined") {			
+		  localStorage.setItem("illuminate-movelevel", index);
+		}
 	}
 	
 	var set=""
